@@ -1,0 +1,42 @@
+.best-dishes .swiper {
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
+}
+
+.best-dishes .swiper-wrapper {
+  padding: 40px 0px 38px;
+}
+
+@media (max-width: 640px) {
+  .best-dishes .swiper-wrapper {
+    /* padding: 0px 20px; */
+  }
+}
+
+.best-dishes .swiper-button-next {
+  /* top: 0; */
+}
+/* .swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  padding: 12px 8px;
+  border-radius: 100%;
+  border: 2px solid black;
+  color: red;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+} */
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  @apply bg-orange-400 w-10 h-10 rounded-full;
+}
+
+.swiper .swiper-button-prev:after,
+.swiper .swiper-button-next:after {
+  --swiper-navigation-size: 20px;
+  @apply text-white  font-bold;
+}

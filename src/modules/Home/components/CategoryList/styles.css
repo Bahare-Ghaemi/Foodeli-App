@@ -1,0 +1,14 @@
+.category-list .swiper{
+  padding-right: 25px;
+  padding-left: 30px;
+}
+
+.category-list .swiper-wrapper {
+  margin-bottom: 35px;
+}
+@media (width <= 640px) {
+  .category-list .swiper{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

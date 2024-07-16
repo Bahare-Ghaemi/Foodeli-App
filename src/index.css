@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  --background: #0d0d0d;
+  --box: #292524;
+  --title: #ffffffe5;
+  --muted: #a0a0a0;
+  --searchInput: #44403c;
+  --skeletonDetails: #0d0d0d;
+  --skeletonShadow: #0d0d0d;
+
+  /* background-color: var(--background); */
+  @apply bg-darkBg;
+}
+
+.light {
+  --background: #ffffff;
+  --box: #ffffff;
+  --title: #232323;
+  --muted: #a1a1a1;
+  --searchInput: #e4e4e4;
+  --skeletonDetails: #e5e7eb;
+  --skeletonShadow: #f4f4f5;
+
+  /* background-color: var(blue); */
+  @apply bg-lightBg;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/Inter-Medium.ttf");
+}
+
+body {
+  font-family: Inter;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h1 {
+  @apply text-titleColor;
+}
+
+p,
+span {
+  @apply text-mutedColor;
+}
