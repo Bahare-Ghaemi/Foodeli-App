@@ -13,7 +13,7 @@ const ProductList = ({ className, isLoading }: TProps) => {
   return (
     <div className={`product-list ${className}`}>
       {isLoading
-        ? [...Array(9)].map((e, i) => <ProductBoxSkeleton key={i}/>)
+        ? [...Array(9)].map((i) => <ProductBoxSkeleton key={i}/>)
         : productList?.map((productItem) => (
             <ProductBox data={productItem} key={productItem?.id} />
           ))}

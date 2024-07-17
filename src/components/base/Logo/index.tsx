@@ -20,7 +20,7 @@ const FoodeliLogo = ({
         <img
           src="/assets/images/logo.svg"
           style={{ width: `${width}px`, height: `${height}px` }}
-          className="hidden md:block"
+          className="hidden md:block rounded-lg"
           alt="logo"
         />
         {/* Mobile */}

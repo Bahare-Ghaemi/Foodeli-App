@@ -2,7 +2,6 @@ import { useLocation, useRoutes } from "react-router-dom";
 import { router } from "./routes";
 import useLocaleStorage from "./hooks/useLocaleStorage";
 import { useEffect } from "react";
-import { useGlobalStore } from "./store/global";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -12,6 +11,7 @@ const App = () => {
 
   useEffect(() => {
     setPage(1);
+    console.log(page)
   }, [pathname]);
 
   return routes;

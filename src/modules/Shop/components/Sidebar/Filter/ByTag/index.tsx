@@ -1,4 +1,3 @@
-import { Suspense, useEffect } from "react";
 import useGetTagList from "../../../../hooks/useGetTagList";
 import DotsLoading from "../../../../../../components/base/Loading/Dots";
 

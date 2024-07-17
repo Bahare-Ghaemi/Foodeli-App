@@ -14,7 +14,7 @@ const socialList = [
 const Summary = ({ className }: any) => {
   return (
     <div className={`${className}`}>
-      <FoodeliLogo width={125} height={45} />
+      <FoodeliLogo width={45} height={45} />
       <p className="text-sm text-mutedColor mt-5">
         Savor the artistry where every dish is a culinary masterpiece
       </p>

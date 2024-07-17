@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import {  useQuery } from "@tanstack/react-query";
 import { getProductListService } from "../shop.service";
 import { useShopStore } from "../store";
 import { useEffect } from "react";

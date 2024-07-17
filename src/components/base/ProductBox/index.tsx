@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import TProductItem from "../../../types/product";
 import Heart from "../icons/Heart";
 import PlateIcon from "../icons/Plate";
-import StarIcon from "../icons/Star";
 import { useMemo, useState } from "react";
 import StarIconFill from "../icons/star/Fill";
 
@@ -33,7 +32,7 @@ const ProductBox = ({ data: productItem, className }: TProps) => {
             src={productItem?.image}
             alt={productItem?.name}
             style={imgIsLoaded ? {} : { filter: "blur(10px)" }}
-            onLoad={(e) => setImgIsLoaded(true)}
+            onLoad={() => setImgIsLoaded(true)}
             className="rounded-full w-[160px] h-[160px] mx-auto group-hover:scale-105 duration-300"
           />
         </figure>

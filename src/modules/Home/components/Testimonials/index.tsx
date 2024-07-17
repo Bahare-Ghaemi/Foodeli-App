@@ -10,7 +10,9 @@ type TProps = {
 
 const Testimonials = ({ className }: TProps) => {
   return (
-    <div className={`testimonials flex flex-col md:flex-row gap-x-[50px] ${className}`}>
+    <div
+      className={`testimonials flex flex-col md:flex-row gap-x-[50px] ${className}`}
+    >
       {/* Left */}
       <div className="w-full md:w-6/12">
         <figure>
@@ -28,6 +30,8 @@ const Testimonials = ({ className }: TProps) => {
             loop
             modules={[Autoplay]}
             autoplay
+            break320={{slidesPerView: 1, spaceBetween: 0}}
+            break1280={{ slidesPerView: 1, spaceBetween: 0 }}
             break1500={{ slidesPerView: 1, spaceBetween: 0 }}
           >
             {testimonialList?.map((testimonial) => (

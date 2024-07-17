@@ -1,9 +1,6 @@
-import { useState } from "react";
 import Breadcrumbs from "../../../../components/base/Beadcrumbs";
 import TProductItem from "../../../../types/product";
-import Pagination from "../../../Shop/components/Pagination";
 import PlateIcon from "../../../../components/base/icons/Plate";
-import StarIcon from "../../../../components/base/icons/Star";
 import PersonIcon from "../../../../components/base/icons/Person";
 import CategoryList from "./CategoryList";
 import AddToCart from "../AddToCart";

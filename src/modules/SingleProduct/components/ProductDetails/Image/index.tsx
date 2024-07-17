@@ -6,7 +6,7 @@ type TProps = {
   name: string;
 };
 
-const ProductImage = ({ name, src, className }: TProps) => {
+const ProductImage = ({ name, src }: TProps) => {
   const [imgIsLoaded, setImgIsLoaded] = useState(false);
   
   return (

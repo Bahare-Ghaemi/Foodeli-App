@@ -25,6 +25,7 @@ const CategoryList = ({ className }: TProps) => {
           modules={[Pagination, Autoplay]}
           loop={true}
           break1500={{ slidesPerView: 5, spaceBetween: 25 }}
+          break1280={{ slidesPerView: 4, spaceBetween: 20 }}
           break320={{ slidesPerView: 1, spaceBetween: 30 }}
         >
           {categoryList?.map((categoryItem) => (

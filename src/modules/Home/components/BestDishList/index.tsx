@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import Slider from "../../../../components/base/Slider";
 import { useShopStore } from "../../../Shop/store";
 import ProductBox from "../../../../components/base/ProductBox";
@@ -36,8 +36,8 @@ const BestDishList = ({ isLoading, className }: TProps) => {
           {isLoading ? (
             <>
               <div className="hidden md:grid grid-cols-4 gap-x-4 mt-[60px]">
-                {[...Array(4)].map((e, i) => (
-                  <ProductBoxSkeleton key={i}/>
+                {[...Array(4)].map((i) => (
+                  <ProductBoxSkeleton key={i} />
                 ))}
               </div>
               <div className="md:hidden">
@@ -47,6 +47,8 @@ const BestDishList = ({ isLoading, className }: TProps) => {
           ) : (
             <Slider
               navigation
+              break320={{ slidesPerView: 1, spaceBetween: 0 }}
+              break1280={{ slidesPerView: 4, spaceBetween: 20 }}
               break1500={{ slidesPerView: 4, spaceBetween: 20 }}
               loop
               modules={[Navigation]}

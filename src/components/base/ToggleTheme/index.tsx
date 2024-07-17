@@ -37,14 +37,14 @@ const ToggleTheme = ({ size = 35, className }: TProps) => {
           disabled={currentTheme == "light" ? false : true}
           onClick={() => setCurrentTheme("dark")}
         >
-          <MoonIcon color="#FF9401"/>
+          <MoonIcon color="#FF9401" size={size}/>
         </button>
       ) : (
         <button
           disabled={currentTheme == "dark" ? false : true}
           onClick={() => setCurrentTheme("light")}
         >
-          <SunIcon color="#FF9401"/>
+          <SunIcon color="#FF9401" size={size}/>
         </button>
       )}
     </div>

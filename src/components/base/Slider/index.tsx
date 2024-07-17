@@ -1,4 +1,3 @@
-import { Pagination } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import { SwiperModule } from "swiper/types";
 
@@ -17,8 +16,8 @@ type TProps = {
   navigation?: boolean;
   modules: SwiperModule[];
   loop: boolean;
-  break320?: TBreakPoint;
-  break1280?: TBreakPoint;
+  break320: TBreakPoint;
+  break1280: TBreakPoint;
   break1500: TBreakPoint;
   children: React.ReactNode;
   autoplay: boolean;

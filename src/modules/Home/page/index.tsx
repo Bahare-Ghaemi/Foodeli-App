@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import AboutUs from "../components/AboutUS";
 import Landing from "../components/Landing";
 import CategoryList from "../components/CategoryList";
-import scrollToTop from "../../../utils/scrollToTop";
 import { useGetProductList } from "../../Shop/hooks/useGetProductList";
 import BestDishList from "../components/BestDishList";
 import Testimonials from "../components/Testimonials";

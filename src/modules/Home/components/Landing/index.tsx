@@ -8,7 +8,7 @@ type TProps = {
 const Landing = ({ className }: TProps) => {
   return (
     <section
-      className={`w-10/12 mx-auto flex flex-col gap-y-10 md:flex-row justify-between min-h-[calc(100vh-122px)] md:h-[calc(100vh-122px)]`}
+      className={`w-10/12 mx-auto flex flex-col gap-y-10 md:flex-row justify-between min-h-[calc(100vh-122px)] md:h-[calc(100vh-122px)] ${className}`}
     >
       {/* Left Side */}
       <div className="w-full md:w-6/12 flex flex-col justify-center">
