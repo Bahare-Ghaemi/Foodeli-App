@@ -11,15 +11,15 @@ const ShopLayout = () => {
       <Header />
       <div className="shop-layout w-10/12 mx-auto grid grid-cols-1 md:grid-cols-12 gap-x-10 min-h-screen">
         {/* Sidebar */}
-        <ShopSidebar className="col-span-3 hidden md:block"/>
+        <ShopSidebar className="col-span-3 hidden md:block" />
         {/* MAin Content */}
         <main className="md:col-span-9">
           <Breadcrumbs prevLink="home" currTitle="Shop" className="mb-6" />
           <Outlet />
-          <Pagination className="w-full mt-16"/>
+          <Pagination className="w-full mt-16" />
         </main>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

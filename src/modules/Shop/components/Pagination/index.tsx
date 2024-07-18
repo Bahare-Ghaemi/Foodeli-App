@@ -33,6 +33,7 @@ const Pagination = ({ className }: TProps) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page]);
 
+
   return (
     <div className={`${className} flex justify-center`}>
       <div className={`join`}>
