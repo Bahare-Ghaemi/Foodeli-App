@@ -2,7 +2,7 @@ import TProductItem from "../../../types/product";
 
 type TShopStore = {
   productList: TProductItem[];
-  currentPage: number | string | null;
+  currentPage: number | null;
   totalProductsCount: number | null;
 
   setProductList: (list: TProductItem[]) => void;

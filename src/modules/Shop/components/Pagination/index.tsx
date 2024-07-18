@@ -9,7 +9,7 @@ type TProps = {
 const Pagination = ({ className }: TProps) => {
   const [page, setPage] = useLocaleStorage("current-page", 1);
 
-  const { totalProductsCount, setCurrentPage } = useShopStore();
+  const { totalProductsCount, setCurrentPage, currentPage } = useShopStore();
 
   const lastPage = useMemo(() => {
     return totalProductsCount && Math.ceil(totalProductsCount / 9);
@@ -18,21 +18,18 @@ const Pagination = ({ className }: TProps) => {
   const clickHandler = (type: "inc" | "dec") => {
     switch (type) {
       case "inc":
-        setPage((prev: number) => prev + 1);
+        // setPage((prev: number) => prev + 1);
+        currentPage && setCurrentPage(currentPage + 1);
         break;
       case "dec":
-        setPage((prev: number) => prev - 1);
+        currentPage && setCurrentPage(currentPage - 1);
         break;
       default:
         break;
     }
   };
 
-  useEffect(() => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [page]);
-
+  
 
   return (
     <div className={`${className} flex justify-center`}>

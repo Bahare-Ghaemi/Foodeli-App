@@ -3,7 +3,7 @@ import TShopStore from "./type";
 
 export const useShopStore = create<TShopStore>()((set) => ({
   productList: [],
-  currentPage: localStorage.getItem("current-page") && 1,
+  currentPage: Number(localStorage.getItem("current-page")),
   totalProductsCount: null,
 
   setProductList: (list) => {
