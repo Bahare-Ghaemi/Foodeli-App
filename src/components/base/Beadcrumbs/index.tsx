@@ -8,7 +8,7 @@ type TProps = {
 
 const Breadcrumbs = ({ prevLink, currTitle, className }: TProps) => {
   return (
-    <div className={`breadcrumbs text-sm ${className}`}>
+    <div className={`breadcrumbs text-sm text-mutedColor ${className}`}>
       <ul className="flex gap-y-2 flex-wrap md:flex-nowrap z-0">
         {prevLink == "home" ? (
           <>

@@ -7,7 +7,6 @@ type TProps = {
 };
 
 const Pagination = ({ className }: TProps) => {
-  const [page, setPage] = useLocaleStorage("current-page", 1);
 
   const { totalProductsCount, setCurrentPage, currentPage } = useShopStore();
 
@@ -36,21 +35,21 @@ const Pagination = ({ className }: TProps) => {
       <div className={`join`}>
         <button
           className={`join-item ${
-            page == 1
+            currentPage == 1
               ? "bg-orange-300 min-h-12 px-4 cursor-not-allowed"
               : "bg-orange-400 btn hover:bg-orange-500"
           } border-0 text-white`}
-          onClick={() => (page == 1 ? null : clickHandler("dec"))}
+          onClick={() => (currentPage == 1 ? null : clickHandler("dec"))}
         >
           «
         </button>
         <button className="join-item px-3 text-orange-500  border-0 bg-white">
-          Page {page}
+          Page {currentPage}
         </button>
         <button
-          onClick={() => (page == lastPage ? null : clickHandler("inc"))}
+          onClick={() => (currentPage == lastPage ? null : clickHandler("inc"))}
           className={`join-item border-0 text-white ${
-            page == lastPage
+            currentPage == lastPage
               ? "bg-orange-300 min-h-12 px-4 cursor-not-allowed"
               : "bg-orange-400 btn hover:bg-orange-500"
           }`}

@@ -1,21 +1,37 @@
 import { Link } from "react-router-dom";
 import categoryList from "../../../../../../data/categoryList";
+import { useShopStore } from "../../../../store";
+import useGetUrlQuery from "../../../../../../hooks/useGetUrlQuery";
+import { useEffect } from "react";
 
 type TProps = {};
 
 const FilterMyMeal = ({}: TProps) => {
+  const { setSelectedMeal } = useShopStore();
+  const meal = useGetUrlQuery("meal");
+
+  useEffect(() => {
+    setSelectedMeal(meal);
+  }, [meal]);
+
   return (
     <div className="collapse collapse-arrow border-b border-primaryColor rounded-none">
       <input type="radio" name="my-accordion-2" defaultChecked />
-      <div className="collapse-title p-0 flex items-center text-primaryColor">Filter by Meal</div>
+      <div className="collapse-title p-0 flex items-center text-primaryColor">
+        Filter by Meal
+      </div>
       <div className="collapse-content p-0">
         <div className="meal-list flex flex-col">
           {categoryList?.map((categoryItem, index) => (
             <Link
-              className={`meal-item  py-2 ${
+              className={`meal-item py-2 duration-300 ${
                 index < categoryList?.length - 1 && "border-b"
+              } ${
+                categoryItem?.title == meal
+                  ? "text-primaryColor"
+                  : "hover:text-titleColor"
               }`}
-              to={"#"}
+              to={`/shop?meal=${categoryItem?.title}`}
               key={categoryItem?.id}
             >
               {categoryItem?.title}

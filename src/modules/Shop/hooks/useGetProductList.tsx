@@ -8,12 +8,14 @@ export const useGetProductList = (limit?: number, skip?: number) => {
 
   const {
     data,
+    refetch: getAllProductList,
     isLoading: getIsLoading,
     isSuccess: getIsSuccess,
     isError: getIsError,
   } = useQuery({
     queryKey: ["product-list", skip,limit],
     queryFn: () => getProductListService(limit, skip),
+    enabled: false
   });
 
   const { recipes: productList, total } = data || {};
@@ -25,5 +27,5 @@ export const useGetProductList = (limit?: number, skip?: number) => {
     }
   }, [getIsSuccess]);
 
-  return { productList, getIsSuccess, getIsLoading, getIsError };
+  return { productList,getAllProductList, getIsSuccess, getIsLoading, getIsError };
 };

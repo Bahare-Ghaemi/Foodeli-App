@@ -5,6 +5,8 @@ export const useShopStore = create<TShopStore>()((set) => ({
   productList: [],
   currentPage: Number(localStorage.getItem("current-page")),
   totalProductsCount: null,
+  selectedMeal: "",
+  selectedTag: "",
 
   setProductList: (list) => {
     set(() => ({
@@ -23,4 +25,16 @@ export const useShopStore = create<TShopStore>()((set) => ({
       totalProductsCount: count,
     }));
   },
+
+  setSelectedMeal: (meal) => {
+    set(() => ({
+      selectedMeal: meal,
+    }));
+  },
+
+  setSelectedTag: (tag) => {
+    set(() => ({
+      selectedTag: tag,
+    }));
+  }
 }));

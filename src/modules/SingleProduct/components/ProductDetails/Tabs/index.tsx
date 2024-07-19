@@ -10,18 +10,18 @@ const TabsProduct = ({ ingredients, instructions, className }: TProps) => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className={`${className}`}>
+    <div className={`text-mutedColor ${className}`}>
       <div role="tablist" className="tabs tabs-bordered w-full md:w-6/12">
         <a
           role="tab"
-          className={`tab ${activeTab == 1 && "tab-active"}`}
+          className={`tab text-mutedColor ${activeTab == 1 && "tab-active"}`}
           onClick={() => setActiveTab(1)}
         >
           Ingredients
         </a>
         <a
           role="tab"
-          className={`tab ${activeTab == 2 && "tab-active"}`}
+          className={`tab text-mutedColor ${activeTab == 2 && "tab-active"}`}
           onClick={() => setActiveTab(2)}
         >
           Instructions

@@ -12,7 +12,7 @@ const CategoryList = ({ data: categoryList, className }: TProps) => {
       <div className="flex gap-x-1.5">
         {categoryList?.map((categoryItem) => (
           <Link
-            to={`/shop?category=${categoryItem}`}
+            to={`/shop?meal=${categoryItem}`}
             className="text-xs text-gray-400 bg-gray-200 rounded-full px-2 py-[3px] block"
             key={categoryItem}
           >

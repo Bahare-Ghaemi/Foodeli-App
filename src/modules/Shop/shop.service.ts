@@ -14,3 +14,25 @@ export const getTagListService = async (limit = 0, skip = 0, select = "") => {
   );
   return data;
 };
+
+export const filterByMealService = async (
+  meal: string | null,
+  limit = 0,
+  skip = 0
+) => {
+  const { data } = await api.get(
+    `recipes/meal-type/${meal}?limit=${limit}&skip=${skip}`
+  );
+  return data;
+};
+
+export const filterByTagService = async (
+  tag: string | null,
+  limit = 0,
+  skip = 0
+) => {
+  const { data } = await api.get(
+    `recipes/tag/${tag}?limit=${limit}&skip=${skip}`
+  );
+  return data;
+};
