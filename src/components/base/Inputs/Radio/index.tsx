@@ -1,12 +1,11 @@
 import TInput from "../../../../types/input";
 
 interface TRadioInput extends TInput {
-  id: string;
+  id?: string;
 }
 
 const RadioInput = ({
   formik,
-  id,
   name,
   value,
   label,

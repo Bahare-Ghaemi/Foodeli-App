@@ -1,5 +1,4 @@
-import { useEffect, useMemo } from "react";
-import useLocaleStorage from "../../../../hooks/useLocaleStorage";
+import { useMemo } from "react";
 import { useShopStore } from "../../store";
 
 type TProps = {
@@ -7,7 +6,6 @@ type TProps = {
 };
 
 const Pagination = ({ className }: TProps) => {
-
   const { totalProductsCount, setCurrentPage, currentPage } = useShopStore();
 
   const lastPage = useMemo(() => {
