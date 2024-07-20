@@ -6,14 +6,14 @@ import useFilterByMeal from "../hooks/useFilterByMeal";
 import { useFilterByTag } from "../hooks/useFilterByTag";
 
 const ShopPage = () => {
-  const { currentPage, setProductList, selectedMeal, selectedTag } =
+  const { currentPage,  selectedMeal, selectedTag } =
     useShopStore();
 
   const skip = useMemo(() => {
     return (Number(currentPage) - 1) * 9;
   }, [currentPage]);
 
-  const { productList, getAllProductList, getIsSuccess, getIsLoading } =
+  const { getAllProductList, getIsLoading } =
     useGetProductList(9, skip);
   const { getProductsByMeal, productsByMealIsLoading } = useFilterByMeal(
     selectedMeal,
@@ -27,18 +27,17 @@ const ShopPage = () => {
   );
 
   useEffect(() => {
-    selectedMeal
-      ? getProductsByMeal()
-      : selectedTag
-      ? getProductsByTag()
-      : getAllProductList();
-  }, [selectedMeal, selectedTag, currentPage]);
-
-  useEffect(() => {
-    if (getIsSuccess) {
-      setProductList(productList);
+    if (selectedMeal) {
+      getProductsByMeal()
+      console.log("get meals")
+    }else if (selectedTag) {
+      getProductsByTag()
+      console.log("get tags")
+    }else {
+      getAllProductList();
+      console.log("get all")
     }
-  }, [getIsSuccess, currentPage]);
+  }, [selectedMeal, selectedTag, currentPage]);
 
   return (
     <div className="shop-page">

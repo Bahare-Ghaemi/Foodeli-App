@@ -15,7 +15,6 @@ const TagList = ({ data: tagList }: TTagsProps) => {
 
   useEffect(() => {
     setSelectedTag(tag);
-    setCurrentPage(1)
   }, [tag]);
 
   return (
@@ -23,6 +22,7 @@ const TagList = ({ data: tagList }: TTagsProps) => {
       {tagList?.map((tagItem) => (
         <Link
           to={`/shop?tag=${tagItem}`}
+          onClick={() => setCurrentPage(1)}
           key={tagItem}
           className={`inline-block text-[13px] text-gray-400 border-[1.5px] border-gray-400 px-1.5 py-.5 rounded-md duration-300 ${
             tag == tagItem
@@ -37,12 +37,20 @@ const TagList = ({ data: tagList }: TTagsProps) => {
   );
 };
 
-const FilterByTag = () => {
+type TProps = {
+  defaultChecked?: boolean;
+};
+
+const FilterByTag = ({ defaultChecked = false }: TProps) => {
   const { tagList, getTagsIsLoading, getTagsIsError } = useGetTagList();
 
   return (
     <div className="collapse collapse-arrow border-b border-primaryColor rounded-none">
-      <input type="radio" name="my-accordion-2" />
+      <input
+        type="radio"
+        name="my-accordion-2"
+        defaultChecked={defaultChecked}
+      />
       <div className="collapse-title p-0 flex items-center text-primaryColor">
         Filter by Tag
       </div>

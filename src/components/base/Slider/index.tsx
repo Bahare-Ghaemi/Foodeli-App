@@ -4,6 +4,7 @@ import { SwiperModule } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
+import 'swiper/css/zoom';
 import "./styles.css";
 
 type TBreakPoint = {
@@ -16,6 +17,7 @@ type TProps = {
   navigation?: boolean;
   modules: SwiperModule[];
   loop: boolean;
+  zoom?: boolean
   break320: TBreakPoint;
   break1280: TBreakPoint;
   break1500: TBreakPoint;
@@ -28,6 +30,7 @@ const Slider = ({
   navigation,
   autoplay,
   loop,
+  zoom,
   modules,
   break320,
   break1280,
@@ -46,6 +49,7 @@ const Slider = ({
       autoplay={autoplay ? { delay: 2000, pauseOnMouseEnter: true } : false}
       modules={modules}
       loop={loop}
+      zoom={zoom}
       navigation={navigation}
       className="mySwiper"
       breakpoints={{ 320: break320, 1280: break1280, 1500: break1500 }}

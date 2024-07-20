@@ -28,8 +28,6 @@ const Pagination = ({ className }: TProps) => {
     }
   };
 
-  
-
   return (
     <div className={`${className} flex justify-center`}>
       <div className={`join`}>

@@ -4,10 +4,12 @@ import { useShopStore } from "../../../../store";
 import useGetUrlQuery from "../../../../../../hooks/useGetUrlQuery";
 import { useEffect } from "react";
 
-type TProps = {};
+type TProps = {
+  defaultChecked?: boolean
+};
 
-const FilterMyMeal = ({}: TProps) => {
-  const { setSelectedMeal } = useShopStore();
+const FilterMyMeal = ({defaultChecked = false}: TProps) => {
+  const { setSelectedMeal, setCurrentPage } = useShopStore();
   const meal = useGetUrlQuery("meal");
 
   useEffect(() => {
@@ -16,7 +18,7 @@ const FilterMyMeal = ({}: TProps) => {
 
   return (
     <div className="collapse collapse-arrow border-b border-primaryColor rounded-none">
-      <input type="radio" name="my-accordion-2" defaultChecked />
+      <input type="radio" name="my-accordion-2" defaultChecked={defaultChecked} />
       <div className="collapse-title p-0 flex items-center text-primaryColor">
         Filter by Meal
       </div>
@@ -32,6 +34,7 @@ const FilterMyMeal = ({}: TProps) => {
                   : "hover:text-titleColor"
               }`}
               to={`/shop?meal=${categoryItem?.title}`}
+              onClick={() => setCurrentPage(1)}
               key={categoryItem?.id}
             >
               {categoryItem?.title}
