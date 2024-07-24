@@ -10,6 +10,7 @@ export default {
         searchInputColor: "var(--searchInput)",
         skeletonDetailsColor: "var(--skeletonDetails)",
         skeletonShadowColor: "var(--skeletonShadow)",
+        inputBgColor: "var(--inputBg)",
 
         lightColor: "#ffffff",
         backgroundColor: "var(--background)",

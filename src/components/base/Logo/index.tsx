@@ -5,6 +5,7 @@ type TLogo = {
   height?: number;
   mobWidth?: number;
   mobHeight?: number;
+  vertical?: boolean;
 };
 
 const FoodeliLogo = ({
@@ -12,9 +13,15 @@ const FoodeliLogo = ({
   height = 45,
   mobWidth = 45,
   mobHeight,
+  vertical = false,
 }: TLogo) => {
   return (
-    <Link to={"/"} className="flex gap-x-2.5 items-center">
+    <Link
+      to={"/"}
+      className={`flex ${
+        vertical ? "flex-col gap-y-3 items-center" : "flex-row gap-x-2.5"
+      }  items-center`}
+    >
       <figure>
         {/* Desktop */}
         <img

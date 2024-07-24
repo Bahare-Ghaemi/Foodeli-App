@@ -8,7 +8,7 @@ const BasketBtn = () => {
       <BasketIcon />
       </div>
       <span className="-top-[3px] -right-[7px] w-[18px] h-[18px] bg-primaryColor rounded-full absolute text-xs text-white flex justify-center items-center">
-        4
+        0
       </span>
     </Link>
   );

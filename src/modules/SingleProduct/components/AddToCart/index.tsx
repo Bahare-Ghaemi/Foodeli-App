@@ -7,7 +7,7 @@ type TProps = {
 
 const AddToCart = ({ className, price }: TProps) => {
   return (
-    <div className={`${className} flex gap-x-10`}>
+    <div className={`${className} flex gap-x-10 justify-between sm:justify-normal`}>
       {/* Price */}
       <div className="flex items-center gap-x-1">
         <span className="text-slate-400 text-xl mt-2.5">$</span>

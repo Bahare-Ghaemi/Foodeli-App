@@ -36,7 +36,7 @@ const Testimonials = ({ className }: TProps) => {
           >
             {testimonialList?.map((testimonial) => (
               <SwiperSlide>
-                <TestimonialItem data={testimonial} />
+                <TestimonialItem data={testimonial} key={testimonial?.name}/>
               </SwiperSlide>
             ))}
           </Slider>

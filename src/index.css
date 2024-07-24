@@ -7,6 +7,7 @@
   --box: #292524;
   --title: #ffffffe5;
   --muted: #a0a0a0;
+  --inputBg: #00000066;
   --searchInput: #44403c;
   --skeletonDetails: #0d0d0d;
   --skeletonShadow: #0d0d0d;
@@ -20,6 +21,7 @@
   --box: #ffffff;
   --title: #232323;
   --muted: #a1a1a1;
+  --inputBg: #e5e5e58d;
   --searchInput: #e4e4e4;
   --skeletonDetails: #e5e7eb;
   --skeletonShadow: #f4f4f5;

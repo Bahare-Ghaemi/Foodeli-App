@@ -11,7 +11,7 @@ const CategoryItem = ({ data: categoryItem, className }: TProps) => {
     <Link
       className={`category-item bg-boxBg flex flex-col gap-y-3 items-center my-7 py-6 rounded-3xl hover:scale-[95%] duration-300 ${className}`}
       style={{ boxShadow: "2px 10px 30px 0px rgba(0,0,0,0.1" }}
-      to={"#"}
+      to={`/shop?meal=${categoryItem?.title}`}
     >
       {/* Image */}
       <div className="w-28 h-28 rounded-full bg-[#ff95016e] flex justify-center items-center">

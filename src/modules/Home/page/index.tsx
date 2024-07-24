@@ -8,18 +8,22 @@ import Testimonials from "../components/Testimonials";
 import Application from "../components/Application";
 
 const HomePage = () => {
-  const { getIsLoading } = useGetProductList(0, 0);
+  const { getIsLoading, getAllProductList } = useGetProductList(0, 0);
 
   useEffect(() => {
     // scrollToTop();
+    getAllProductList();
   }, []);
 
   return (
     <div className="home-page">
       <Landing />
-      <AboutUs className="mt-24 md:mt-0"/>
+      <AboutUs className="mt-24 md:mt-0" />
       <CategoryList className="w-10/12 mx-auto mt-14 md:mt-0" />
-      <BestDishList className="mt-[80px] md:mt-[150px]" isLoading={getIsLoading} />
+      <BestDishList
+        className="mt-[80px] md:mt-[150px]"
+        isLoading={getIsLoading}
+      />
       <Testimonials className="w-10/12 mx-auto mt-[300x]" />
       <Application className="w-10/12 mx-auto mt-20" />
     </div>

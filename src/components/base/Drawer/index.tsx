@@ -6,6 +6,7 @@ import ToggleTheme from "../ToggleTheme";
 import { useMemo } from "react";
 import LoginBtn from "../Buttons/Login";
 import SearchInput from "../Inputs/Search";
+import { useLoginStore } from "../../../modules/Login/store";
 
 type TProps = {
   className?: string;
@@ -14,13 +15,16 @@ type TProps = {
 const Drawer = ({ className }: TProps) => {
   const location = useLocation();
 
+  const { loggedInUser } = useLoginStore();
+
   const pathname = useMemo(() => {
     return location.pathname;
   }, [location.pathname]);
+
   return (
-    <div className={`drawer z-10 ${className}`}>
+    <div className={`drawer w-fit z-10 ${className}`}>
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content">
+      <div className="drawer-content w-fit">
         {/* Page content here */}
         <label
           htmlFor="my-drawer-4"
@@ -41,7 +45,7 @@ const Drawer = ({ className }: TProps) => {
               <FoodeliLogo />
               <ToggleTheme />
             </div>
-            <SearchInput className="mt-10"/>
+            <SearchInput className="mt-10" />
             <ul className="mt-10 flex flex-col gap-y-5">
               {navList?.map((navItem) => (
                 <li key={navItem?.title}>
@@ -59,7 +63,7 @@ const Drawer = ({ className }: TProps) => {
               ))}
             </ul>
           </div>
-          <LoginBtn width={150} className="mx-auto" />
+          {!loggedInUser && <LoginBtn width={150} className="mx-auto" />}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import CallToActionBtn from "../../../../components/base/Buttons/CallToAction";
 import PlayIcon from "../../../../components/base/icons/Play";
+import ImageLoader from "../../../../components/base/Loading/Image";
 
 type TProps = {
   className?: string;
@@ -53,18 +54,18 @@ const Landing = ({ className }: TProps) => {
       </div>
       {/* Right Side */}
       <div className="w-full md:w-6/12">
-        <figure className="h-full flex justify-end">
-          <img
-            src="/assets/images/landing-img.svg"
-            alt=""
-            className="hidden md:block h-full"
-          />
-          <img
-            src="/assets/images/Home/about-us-res.svg"
-            alt=""
-            className="md:hidden h-full"
-          />
-        </figure>
+        <ImageLoader
+          src="/assets/images/landing-img.svg"
+          alt="landing-img"
+          className="h-full hidden md:flex justify-end"
+          imgClassName="h-full"
+        />
+        <ImageLoader
+          src="/assets/images/Home/about-us-res.svg"
+          alt="landing-img"
+          className="h-full md:hidden justify-end"
+          imgClassName="h-full"
+        />
       </div>
     </section>
   );

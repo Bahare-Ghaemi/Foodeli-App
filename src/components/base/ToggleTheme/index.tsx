@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import useLocaleStorage from "../../../hooks/useLocaleStorage";
 import { useGlobalStore } from "../../../store/global";
 import MoonIcon from "../icons/Moon";
 import SunIcon from "../icons/Sun";
@@ -12,26 +10,8 @@ type TProps = {
 const ToggleTheme = ({ size = 35, className }: TProps) => {
   const { currentTheme, setCurrentTheme } = useGlobalStore();
 
-  const [theme, setTheme] = useLocaleStorage("theme", "light");
-
-  useEffect(() => {
-    setTheme(currentTheme);
-    console.log(currentTheme)
-    if (currentTheme == "light") {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("light");
-    }else{
-      document.documentElement.classList.add("dark")
-      document.documentElement.classList.remove("light");
-    }
-  }, [currentTheme,document.querySelector("body")]);
-
-  useEffect(() => {
-    setCurrentTheme(theme);
-  }, [theme]);
-
   return (
-    <div className={` ${className} flex items-center`}>
+    <div className={` ${className} items-center`}>
       {currentTheme == "light" ? (
         <button
           disabled={currentTheme == "light" ? false : true}

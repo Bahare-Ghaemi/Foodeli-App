@@ -1,11 +1,13 @@
 type TProps = {
   size: "xs" | "sm" | "md" | "lg";
+  color?: string;
+  className?: string;
 };
 
-const DotsLoading = ({ size }: TProps) => {
+const DotsLoading = ({ size, color = "primaryColor", className }: TProps) => {
   return (
     <span
-      className={`loading loading-dots loading-${size} text-primaryColor`}
+      className={`loading loading-dots loading-${size} text-${color} ${className}`}
     ></span>
   );
 };

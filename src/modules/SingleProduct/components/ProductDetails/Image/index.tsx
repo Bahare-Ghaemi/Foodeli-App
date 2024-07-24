@@ -1,4 +1,4 @@
-import { useState } from "react";
+import ImageLoader from "../../../../../components/base/Loading/Image";
 
 type TProps = {
   className?: string;
@@ -7,19 +7,13 @@ type TProps = {
 };
 
 const ProductImage = ({ name, src }: TProps) => {
-  const [imgIsLoaded, setImgIsLoaded] = useState(false);
-  
   return (
-    <figure className="w-full overflow-hidden rounded-[40px] min-h-[290px] md:min-h-auto">
-      <img
-        src={src}
-        alt={name}
-        className={`rounded-[40px] duration-300 hover:scale-110 cursor-zoom-in ${
-          imgIsLoaded ? "" : "blur-md"
-        }`}
-        onLoad={() => setImgIsLoaded(true)}
-      />
-    </figure>
+    <ImageLoader
+      src={src}
+      alt={name}
+      imgClassName={`rounded-[40px] duration-300 hover:scale-110 cursor-zoom-in`}
+      className="w-full overflow-hidden rounded-[40px] min-h-[290px] md:min-h-auto"
+    />
   );
 };
 
