@@ -4,11 +4,12 @@ import errorAlert from "../../../utils/errorAlert";
 import { useNavigate } from "react-router-dom";
 import useLocaleStorage from "../../../hooks/useLocaleStorage";
 import successAlert from "../../../utils/successAlert";
+import { useEffect } from "react";
 
 const useLogin = () => {
   const navigateTo = useNavigate();
-  const [setAccessToken] = useLocaleStorage("access-token", "");
-  const [ setRefreshToken] = useLocaleStorage("refresh-token", "");
+  const [accessToken, setAccessToken] = useLocaleStorage("access-token", "");
+  const [refreshToken, setRefreshToken] = useLocaleStorage("refresh-token", "");
 
   const {
     mutate: loginUSer,
@@ -19,16 +20,20 @@ const useLogin = () => {
     onSuccess: (data) => {
       console.log(data);
       successAlert(["You Are Logged In Successfully"]);
-        setAccessToken(data.token);
-        setRefreshToken(data.refreshToken);
-        setTimeout(() => {
-          navigateTo("/");
-        }, 3000);
+      setAccessToken(data.token);
+      setRefreshToken(data.refreshToken);
+      setTimeout(() => {
+        navigateTo("/");
+      }, 3000);
     },
     onError: (err) => {
-        errorAlert(err);
+      errorAlert(err);
     },
   });
+
+  useEffect(() => {
+    console.log(accessToken, refreshToken);
+  }, []);
 
   return { loginUSer, loginRes, loginIsLoading };
 };

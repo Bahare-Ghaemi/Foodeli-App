@@ -27,7 +27,7 @@ const TextInput = ({
           id={id}
           {...formik.getFieldProps(name)}
           placeholder={placeholder}
-          className="w-full bg-inputBgColor rounded-lg focus:outline-0 px-5 py-2"
+          className="w-full text-titleColor bg-inputBgColor rounded-lg focus:outline-0 px-5 py-2"
         />
         {formik?.errors[name] && (
           <div className="flex flex-col gap-y-1 mt-1.5">
