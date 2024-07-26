@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# • Foodeli App 🚀
+This is a web application responsive project has been developed with React.js and some useful libraries.
 
-Currently, two official plugins are available:
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>• Technologies ⚙️ </h2>
 
-## Expanding the ESLint configuration
+Project is created with:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+✨ React.js   
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+✨ TailwindCSS
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+✨ DaisyUi
+
+✨ Typescript
+
+✨ Swiper     
+
+✨ Formik + Yup
+
+✨ Zustand 
+
+✨ React-Query
+
+✨ React-Toastify
+
+<br/>
+
+<h2>• Features Included 💡: </h2>
+
+<br/>
+
+## • Project Demo 📷
+
+![Demo](./public/assets/images/Screenshot.png)
+
+<br/>
+
+## • Live Demo 🖥
+Here is a working live demo :  [ProxyLab](https://proxylab-app.vercel.app/)
