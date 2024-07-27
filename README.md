@@ -33,19 +33,6 @@ Project is created with:
 
 * Login
 * Change Theme between Light and Dark
-* Adding Sessions to a Course 
-* Adding Blog Posts
-* Adding/Edit/Remove/Ban Users from Admin Panel
-* Creating Menu Items and Submenus
-* Creating Categories
-* Comment Submission with Pending Approval by Admin Admin
-* Response to Comments
-* Adding Discount Codes for a Course
-* Sending Messages to Admin via Contact Form
-* Admin Responding to User Messages via Email
-* Editing User Profiles
-* Displaying Purchased Courses in User Panel
-* Registering in Courses
 <br/>
 
 ## • Project Demo 📷
@@ -55,4 +42,4 @@ Project is created with:
 <br/>
 
 ## • Live Demo 🖥
-Here is a working live demo :  [ProxyLab](https://proxylab-app.vercel.app/)
+Here is a working live demo :  [FoodeliApp](https://foodeli-app.vercel.app/)
