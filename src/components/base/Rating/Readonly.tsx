@@ -10,9 +10,9 @@ type TProps = {
 const RatingReadonly = ({ rate, size, className }: TProps) => {
   return (
     <div className={`flex gap-x-.5 items-center text-yellow-400 ${className}`}>
-      {[...Array(5)].map((i) =>
+      {[...Array(5)].map((e,i) =>
         i + 1 <= rate ? (
-          <StarIconFill size={size} key={i}/>
+          <StarIconFill size={size} key={i*e}/>
         ) : (
           <StarIconOutline size={size} key={i}/>
         )
